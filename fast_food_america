@@ -1,7 +1,7 @@
 SELECT *
   FROM fast;
   
-SELECT name, latitude, longitude
+SELECT name, city, postalCode, province, latitude, longitude
   FROM fast;
   
 -- Shows states with the most and least fast food restaurants.
