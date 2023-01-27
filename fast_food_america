@@ -1,0 +1,624 @@
+SELECT *
+  FROM fast;
+  
+SELECT name, latitude, longitude
+  FROM fast;
+  
+-- Shows states with the most and least fast food restaurants.
+
+SELECT province,
+       COUNT(province) AS total_province
+  FROM fast
+ GROUP BY province
+ ORDER BY total_province DESC;
+ 
+-- Shows cities with the most and least fast food restaurants.
+
+SELECT city,
+       COUNT(city) AS total_city
+  FROM fast
+ GROUP BY city
+ ORDER BY total_city DESC;
+ 
+-- Shows restaurants with the most locations nationally.
+
+SELECT name,
+       COUNT(name) AS total_nationally
+  FROM fast
+ GROUP BY name
+ ORDER BY total_nationally DESC;
+ 
+-- Shows corrections with spelling throughout the table in order to have accurate numbers.
+
+UPDATE fast
+   SET name = 'McDonalds'
+ WHERE name = "Mcdonald's";
+
+UPDATE fast
+   SET name = "McDonald's"
+ WHERE name = 'Mcdonalds';
+
+UPDATE fast
+   SET name = "McDonald's"
+ WHERE name = 'McDonalds';
+
+UPDATE fast
+   SET name = "McDonald's"
+ WHERE name = "Mc Donald's";
+
+UPDATE fast
+   SET name = "McDonald's"
+ WHERE name = "Mcdonald's - Walmart";
+
+UPDATE fast
+   SET name = "McDonald's"
+ WHERE name = "Mcdonald's #25557McDonalds @ Old Atlanta";
+
+UPDATE fast
+   SET name = "McDonald's"
+ WHERE name = "McDonald's of Mililani Mauka";
+
+UPDATE fast
+   SET name = "McDonald's"
+ WHERE name = 'Mc Donalds';
+
+UPDATE fast
+   SET name = "Hardee's"
+ WHERE name = 'Hardees';
+
+UPDATE fast
+   SET name = "Baja Fresh"
+ WHERE name = 'Baja Fresh Mexican Grill';
+
+UPDATE fast
+   SET name = "Hardee's"
+ WHERE name = 'Hardees';
+
+UPDATE fast
+   SET name = "Long John Silvers / A&W"
+ WHERE name = 'Long John Silver/ A&W';
+
+UPDATE fast
+   SET name = "Long John Silvers / A&W"
+ WHERE name = "Long John Silver/ A&W";
+
+UPDATE fast
+   SET name = "Long John Silvers / A&W"
+ WHERE name = "Long John Silver's / A&W";
+
+UPDATE fast
+   SET name = "Papa John's"
+ WHERE name = "Papa Johns";
+
+UPDATE fast
+   SET name = "Papa John's"
+ WHERE name = "Papa John's Pizza";
+
+UPDATE fast
+   SET name = "Papa John's"
+ WHERE name = "Papa Johns Pizza";
+
+UPDATE fast
+   SET name = "A&W Restaurant"
+ WHERE name = "A&W All-American Food";
+
+UPDATE fast
+   SET name = "A&W Restaurant"
+ WHERE name = "A&W All American Food";
+
+UPDATE fast
+   SET name = "A&W Restaurant"
+ WHERE name = "A&W All-American Foods";
+
+UPDATE fast
+   SET name = "A&W Restaurant"
+ WHERE name = "A&W";
+
+UPDATE fast
+   SET name = "A&W Restaurant"
+ WHERE name = "Aw Restaurant";
+
+UPDATE fast
+   SET name = "A&W Restaurant"
+ WHERE name = "A & W Family Restaurant";
+
+UPDATE fast
+   SET name = "Wendy's"
+ WHERE name = "Wendys";
+
+UPDATE fast
+   SET name = "Arby's"
+ WHERE name = "Arbys";
+
+UPDATE fast
+   SET name = "Arby's"
+ WHERE name = "Arby's Antigo";
+
+UPDATE fast
+   SET name = "Jack in the Box"
+ WHERE name = "Jack In The Box";
+
+UPDATE fast
+   SET name = "Jimmy John's"
+ WHERE name = "Jimmy Johns";
+
+UPDATE fast
+   SET name = "Jimmy John's"
+ WHERE name = "Jimmy John's Gourmet Sandwiches";
+
+UPDATE fast
+   SET name = "Pizza Hut"
+ WHERE name = "Pizza Hut Wingstreet";
+
+UPDATE fast
+   SET name = "Dairy Queen"
+ WHERE name = "Dairy Queen Grill & Chill / Orange Julius";
+
+UPDATE fast
+   SET name = "Dairy Queen"
+ WHERE name = "Dairy Queen Grill & Chill";
+
+UPDATE fast
+   SET name = "Dairy Queen"
+ WHERE name = "DQ Grill & Chill / Orange Julius";
+
+UPDATE fast
+   SET name = "Dairy Queen"
+ WHERE name = "DQ Grill & Chill";
+
+UPDATE fast
+   SET name = "Dairy Queen"
+ WHERE name = "Dairy Queen - Round Rock";
+
+UPDATE fast
+   SET name = "Dairy Queen"
+ WHERE name = "DQ Woodlands";
+
+UPDATE fast
+   SET name = "Domino's Pizza"
+ WHERE name = "Dominos Pizza";
+
+UPDATE fast
+   SET name = "Popeye's"
+ WHERE name = "Popeyes";
+
+UPDATE fast
+   SET name = "Popeye's"
+ WHERE name = "Popeyes Louisiana Kitchen";
+
+UPDATE fast
+   SET name = "Popeye's"
+ WHERE name = "Popeyes Chicken and Biscuits";
+
+UPDATE fast
+   SET name = "Popeye's"
+ WHERE name = "Popeye's Chicken & Biscuits";
+
+UPDATE fast
+   SET name = "Popeye's"
+ WHERE name = "Popeye's Louisiana Kitchen";
+
+UPDATE fast
+   SET name = "Popeye's"
+ WHERE name = "Popeye's Chicken";
+
+UPDATE fast
+   SET name = "Dunkin' Donuts"
+ WHERE name = "Dunkin Donuts";
+
+UPDATE fast
+   SET name = "Sonic"
+ WHERE name = "Sonic Drive In";
+
+UPDATE fast
+   SET name = "Sonic"
+ WHERE name = "SONIC Drive In";
+
+UPDATE fast
+   SET name = "Sonic"
+ WHERE name = "Sonic Drive-In";
+
+UPDATE fast
+   SET name = "Sonic"
+ WHERE name = "Sonic Drive-in";
+
+UPDATE fast
+   SET name = "Sonic"
+ WHERE name = "Sonic Drive-in (trailer)";
+
+UPDATE fast
+   SET name = "Sonic"
+ WHERE name = "Sonic Drive in";
+
+UPDATE fast
+   SET name = "Sonic"
+ WHERE name = "SONIC Drive-In";
+
+UPDATE fast
+   SET name = "Subway"
+ WHERE name = "SUBWAY";
+
+UPDATE fast
+   SET name = "Subway"
+ WHERE name = "SUBWAY®";
+
+UPDATE fast
+   SET name = "Subway"
+ WHERE name = "Subway Sandwiches and Salads";
+
+UPDATE fast
+   SET name = "Subway"
+ WHERE name = "Subway Sandwiches";
+
+UPDATE fast
+   SET name = "Subway"
+ WHERE name = "Subway Guitars";
+
+UPDATE fast
+   SET name = "Subway"
+ WHERE name = "Subway Citgo of Quarryville";
+
+UPDATE fast
+   SET name = "Subway"
+ WHERE name = "Subway - Roland Park";
+
+UPDATE fast
+   SET name = "Subway"
+ WHERE name = "Subway - Bell's Ferry";
+
+UPDATE fast
+   SET name = "Subway"
+ WHERE name = "Subway (johnson) @ Jonesboro";
+
+UPDATE fast
+   SET name = "Chick-fil-a"
+ WHERE name = "Chick-fil-A";
+
+UPDATE fast
+   SET name = "Chick-fil-a"
+ WHERE name = "Chick-Fil-A";
+
+UPDATE fast
+   SET name = "Chick-fil-a"
+ WHERE name = "Chick-fil-a Truett's Luau";
+
+UPDATE fast
+   SET name = "Chick-fil-a"
+ WHERE name = "Chick-fil-a Superstition Springs Center";
+
+UPDATE fast
+   SET name = "Chick-fil-a"
+ WHERE name = "Chick-fil-a Orange Avenue";
+
+UPDATE fast
+   SET name = "Chick-fil-a"
+ WHERE name = "Chick-fil-a Magnolia Mall";
+
+UPDATE fast
+   SET name = "Chick-fil-a"
+ WHERE name = "Chick-fil-a Truett's Luau";
+
+UPDATE fast
+   SET name = "Rally's"
+ WHERE name = "Rallys";
+
+UPDATE fast
+   SET name = "Rally's"
+ WHERE name = "Checkers";
+
+UPDATE fast
+   SET name = "Rally's"
+ WHERE name = "Rally's Hamburgers";
+
+UPDATE fast
+   SET name = "Rally's"
+ WHERE name = "Checker's";
+
+UPDATE fast
+   SET name = "Rally's"
+ WHERE name = "Checker's Hamburgers";
+
+UPDATE fast
+   SET name = "Rally's"
+ WHERE name = "Checker's Drive-in Restaurant";
+
+UPDATE fast
+   SET name = "Rally's"
+ WHERE name = "Rally's Springfield";
+
+UPDATE fast
+   SET name = "Panda Express"
+ WHERE name = "Panda";
+
+UPDATE fast
+   SET name = "Quiznos"
+ WHERE name = "Quizno's +";
+
+UPDATE fast
+   SET name = "Quiznos"
+ WHERE name = "Quiznos Sub";
+
+UPDATE fast
+   SET name = "Captain D's"
+ WHERE name = "Captain D's Seafood";
+
+UPDATE fast
+   SET name = "Long John Silver's"
+ WHERE name = "Long John Silvers";
+
+UPDATE fast
+   SET name = "Raising Cane's Chicken Fingers"
+ WHERE name = "Raising Cane's";
+
+UPDATE fast
+   SET name = "Mr. Hero"
+ WHERE name = "Mr Hero";
+
+UPDATE fast
+   SET name = "KFC"
+ WHERE name = "Kfc";
+
+UPDATE fast
+   SET name = "KFC"
+ WHERE name = "Kfc - Kentucky Fried Chicken";
+
+UPDATE fast
+   SET name = "KFC"
+ WHERE name = "KFC - Kentucky Fried Chicken";
+
+UPDATE fast
+   SET name = "KFC"
+ WHERE name = "Kentucky Fried Chicken";
+
+UPDATE fast
+   SET name = "KFC"
+ WHERE name = "Kfc - Kentucky Fried Chicken";
+
+UPDATE fast
+   SET name = "Carl's Jr."
+ WHERE name = "Carl's Jr. / Green Burrito";
+
+UPDATE fast
+   SET name = "Carl's Jr."
+ WHERE name = "Carl's Jr";
+
+UPDATE fast
+   SET name = "Carl's Jr."
+ WHERE name = "Carl's Jr / Green Burrito";
+
+UPDATE fast
+   SET name = "Carl's Jr."
+ WHERE name = "Carls Jr. / Green Burrito";
+
+UPDATE fast
+   SET name = "Carl's Jr."
+ WHERE name = "Carls Jr";
+
+UPDATE fast
+   SET name = "Carl's Jr."
+ WHERE name = "Carl's Jr - Green Burrito";
+
+UPDATE fast
+   SET name = "Carl's Jr."
+ WHERE name = "Carl's / Green Burrito";
+
+UPDATE fast
+   SET name = "Qdoba Mexican Grill"
+ WHERE name = "QDOBA Mexican Eats";
+
+UPDATE fast
+   SET name = "Qdoba Mexican Grill"
+ WHERE name = "Qdoba Mexican Eats";
+
+UPDATE fast
+   SET name = "KFC / Taco Bell"
+ WHERE name = "KFC/Taco Bell";
+
+UPDATE fast
+   SET name = "Cook-Out"
+ WHERE name = "Cook Out";
+
+UPDATE fast
+   SET name = "Steak N Shake"
+ WHERE name = "Steak 'N Shake";
+
+UPDATE fast
+   SET name = "Bob Evans Restaurant"
+ WHERE name = "Bob Evans";
+
+UPDATE fast
+   SET name = "7-11"
+ WHERE name = "7-Eleven";
+ 
+-- (Top 4 Major cities in the U.S)
+-- New York vs. Los Angeles vs. Chicago vs. Houston most restaurant options.
+
+SELECT name,
+       city
+  FROM fast
+ WHERE city = 'New York';
+
+SELECT name,
+       city
+  FROM fast
+ WHERE city = 'Los Angeles';
+
+SELECT name,
+       city
+  FROM fast
+ WHERE city = 'Chicago';
+
+SELECT name,
+       city
+  FROM fast
+ WHERE city = 'Houston';
+ 
+-- Shows which major city has the most 'healthy' options.
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'New York' AND 
+       name = 'Subway';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'New York' AND 
+       name = "Jimmy John's";
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'New York' AND 
+       name = "Jersey Mike's Subs";
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'New York' AND 
+       name = 'Quiznos';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'New York' AND 
+       name = 'Chick-fil-a';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'New York' AND 
+       name = 'Qdoba Mexican Grill';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'New York' AND 
+       name = 'Chipotle Mexican Grill';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Los Angeles' AND 
+       name = 'Subway';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Los Angeles' AND 
+       name = "Jimmy John's";
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Los Angeles' AND 
+       name = "Jersey Mike's Subs";
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Los Angeles' AND 
+       name = 'Quiznos';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Los Angeles' AND 
+       name = 'Chick-fil-a';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Los Angeles' AND 
+       name = 'Qdoba Mexican Grill';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Los Angeles' AND 
+       name = 'Chipotle Mexican Grill';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Chicago' AND 
+       name = 'Subway';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Chicago' AND 
+       name = "Jimmy John's";
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Chicago' AND 
+       name = "Jersey Mike's Subs";
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Chicago' AND 
+       name = 'Quiznos';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Chicago' AND 
+       name = 'Chick-fil-a';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Chicago' AND 
+       name = 'Qdoba Mexican Grill';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Chicago' AND 
+       name = 'Chipotle Mexican Grill';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Houston' AND 
+       name = 'Subway';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Houston' AND 
+       name = "Jimmy John's";
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Houston' AND 
+       name = "Jersey Mike's Subs";
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Houston' AND 
+       name = 'Quiznos';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Houston' AND 
+       name = 'Chick-fil-a';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Houston' AND 
+       name = 'Qdoba Mexican Grill';
+
+SELECT city,
+       name
+  FROM fast
+ WHERE city = 'Houston' AND 
+       name = 'Chipotle Mexican Grill';
